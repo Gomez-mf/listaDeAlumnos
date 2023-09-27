@@ -1,0 +1,33 @@
+<div class="container my-4" [ngStyle]=getBackgroundColor()  >
+    <p *ngIf="mostrarMsj; else mostrarAlumnos" class="my-4 p-2 text-center fw-bold">
+        No hay alumnos inscriptos
+        <button>Ver alumnos</button>
+    </p>
+    <ng-template  #mostrarAlumnos>
+        <table class="table p2">
+            <thead>
+                <tr [ngClass]="'table-danger'">
+                    <th scope="col">#</th>
+                    <th scope="col">Nombre</th>
+                    <th scope="col">Edad</th>
+                    <th scope="col">Género</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let alumno of alumnos; index as i"  >
+                    <th scope="row">{{i+1}}</th>
+                    <td>{{alumno.nombre}}</td>
+                    <td>{{alumno.edad}}</td>
+                    <td>{{alumno.genero}}</td>
+                    <td>{{alumno.fechaDeInscripcion}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </ng-template>
+    <p class="my-4 p-2 fs-5 text-center">
+        Inicio de cursada {{'30/8/2023 9:00 AM' | date}}
+    </p>
+
+
+
+</div>
