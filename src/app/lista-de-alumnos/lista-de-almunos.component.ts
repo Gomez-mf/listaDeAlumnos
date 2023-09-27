@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
 })
 export class ListaDeAlmunosComponent {
   mostrarMsj = false;
-  alumnos: any[] = [
+  alumnos: Array<any> = [
     {
       nombre: 'Malena Areco',
       edad: 16,

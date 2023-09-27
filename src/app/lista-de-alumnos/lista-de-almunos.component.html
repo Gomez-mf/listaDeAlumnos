@@ -1,7 +1,6 @@
 <div class="container my-4" [ngStyle]=getBackgroundColor()  >
     <p *ngIf="mostrarMsj; else mostrarAlumnos" class="my-4 p-2 text-center fw-bold">
         No hay alumnos inscriptos
-        <button>Ver alumnos</button>
     </p>
     <ng-template  #mostrarAlumnos>
         <table class="table p2">
@@ -19,7 +18,6 @@
                     <td>{{alumno.nombre}}</td>
                     <td>{{alumno.edad}}</td>
                     <td>{{alumno.genero}}</td>
-                    <td>{{alumno.fechaDeInscripcion}}</td>
                 </tr>
             </tbody>
         </table>
